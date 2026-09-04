@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #FAFAF7;
+  --bg-surface: #FFFFFF;
+  --color-primary: #176B87;
+  --color-primary-hover: #12556B;
+  --color-secondary: #DDEFF3;
+  --color-accent: #E8D8BE;
+  --color-price: #F3E6D2;
+  --text-main: #243238;
+  --text-secondary: #68777D;
+  --border-subtle: #E8ECEC;
+  --color-success: #3E8064;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-manrope: 'Manrope', 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-manrope);
+}
+
+/* Custom Mediterranean Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F2F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4D2D6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #176B87;
+}
+
+/* Leaflet Map Customizations */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-inter) !important;
+  z-index: 10;
+  background: #E8ECEC !important;
+}
+
+.custom-map-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  color: #176B87;
+  border: 1.5px solid #176B87;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(23, 107, 135, 0.25);
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-map-marker:hover,
+.custom-map-marker.active {
+  background-color: #176B87;
+  color: #FFFFFF;
+  transform: scale(1.08);
+  z-index: 999 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 12px 30px rgba(36, 50, 56, 0.18) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: normal !important;
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+}
