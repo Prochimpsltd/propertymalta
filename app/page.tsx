@@ -55,8 +55,8 @@ export default function HomePage() {
     if (propertyType !== 'all' && p.propertyType !== propertyType) return false;
     if (minPrice && p.price < Number(minPrice)) return false;
     if (maxPrice && p.price > Number(maxPrice)) return false;
-    if (bedrooms !== 'any' && p.specs.bedrooms < Number(bedrooms)) return false;
-    if (bathrooms !== 'any' && p.specs.bathrooms < Number(bathrooms)) return false;
+    if (bedrooms !== 'any' && p.bedrooms < Number(bedrooms)) return false;
+    if (bathrooms !== 'any' && p.bathrooms < Number(bathrooms)) return false;
     return true;
   }).length;
 
